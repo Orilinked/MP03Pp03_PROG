@@ -37,6 +37,9 @@ public class SQL {
                     "    descripcio TEXT(20),\n" +
                     "    data_caducitat DATE(20),\n" +
                     ");";
+            PreparedStatement pstmt = coon.prepareStatement(sql);
+            int rowsAffected = pstmt.executeUpdate();
+
         }catch (SQLException e){
             throw  new RuntimeException(e);
         }

@@ -4,19 +4,35 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
 <TabPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mp03pp03_prog.HelloController">
     <tabs>
-        <Tab text="Pestaña 1">
+        <Tab text="Entrada Producte">
             <content>
-                <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                    <!-- Contenido de la pestaña 1 -->
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">s
+                        <Label text="NOM:" />
+                        <TextField fx:id="nom" />
+                        <Label text="PREU:" />
+                        <TextField fx:id="preu" />
+                        <Label text="DESCRIPCIÓ:" />
+                        <TextField fx:id="descripció" />
+                        <Label text="DATA_CADUCITAT:" />
+                        <TextField fx:id="data_caducitat" />
                 </AnchorPane>
             </content>
         </Tab>
-        <Tab text="Pestaña 2">
+        <Tab text="Sortida Producte">
             <content>
                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                    <!-- Contenido de la pestaña 2 -->
+                    <Label text="Campo 1:" />
+                    <TextField fx:id="textField1" />
+                    <Label text="Campo 2:" />
+                    <TextField fx:id="textField2" />
+                    <Label text="Campo 3:" />
+                    <TextField fx:id="textField3" />
+                    <Label text="Campo 4:" />
+                    <TextField fx:id="textField4" />
                 </AnchorPane>
             </content>
         </Tab>

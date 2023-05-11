@@ -8,7 +8,7 @@ public class SQL {
         url = "jdbc:sqlite:nevera.db";
     }
 
-    private void guardar_dades(String nom, Float preu, String descripcio, Date data_caducitat){
+    public void guardar_dades(String nom, Float preu, String descripcio, Date data_caducitat){
         try {
             Connection conn = DriverManager.getConnection(url);
             String sql = "INSERT INTO productes (nom, preu, descripcio,data_caducitat) VALUES (?,?,?,?)";
@@ -28,7 +28,7 @@ public class SQL {
             throw new RuntimeException(e);
         }
     }
-    private void Crear_Taules(){
+    public void Crear_Taules(){
         try{
             Connection coon = DriverManager.getConnection(url);
             String sql = "CREATE TABLE productes (\n" +
@@ -45,7 +45,7 @@ public class SQL {
         }
     }
 
-    private void buscar_productes(String nom){
+    public void buscar_productes(String nom){
         try {
             Connection coon = DriverManager.getConnection(url);
             String sql = "SELECT * FROM productes WHERE NOM =?;";
@@ -66,5 +66,4 @@ public class SQL {
             throw new RuntimeException(e);
         }
     }
-
 }
